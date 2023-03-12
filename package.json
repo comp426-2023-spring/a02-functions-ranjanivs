@@ -1,0 +1,27 @@
+{
+  "name": "ranjani-galosh",
+  "version": "1.0.0",
+  "description": "tells you whether you need your galoshes or not",
+  "main": "index.js",
+  "scripts": {
+    "test": "node cli.js -n 35.92 -w 79.05 -z America/New_York"
+  },
+  "bin": {
+    "galosh.js": "./cli.js"
+  },
+  "repository": {
+    "type": "module", 
+    "url": "git+https://github.com/comp426-2023-spring/a02-functions-ranjanivs.git"
+  },
+  "author": "@ranjanivs",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2023-spring/a02-functions-ranjanivs/issues"
+  },
+  "homepage": "https://github.com/comp426-2023-spring/a02-functions-ranjanivs#readme",
+  "dependencies": {
+    "minimist": "^1.2.8",
+    "moment-timezone": "^0.5.41",
+    "node-fetch": "^3.3.1"
+  }
+}
