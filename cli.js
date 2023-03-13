@@ -21,10 +21,11 @@ if(argv.h) {
 }
 
 //timezone
+let timezone;
 if(argv.z != null){
-    const timezone = argv.z
+    timezone = argv.z
 } else{
-    const timezone = moment.tz.guess()
+    timezone = moment.tz.guess()
 }
 
 // latitude and longitude variables
@@ -34,12 +35,18 @@ if(argv.n) {
     latitude = argv.n
 } else if (argv.s) {
     latitude = argv.s*-1
-} 
+}  else{
+    console.log("Latitude must be in range.")
+    process.exit(0);
+}
 
 if(argv.e) {
     longitude = argv.e
 } else if(argv.w) {
     longitude = argv.w*-1
+} else {
+    console.log("Longitude must be in range.");
+    process.exit(0);
 }
  
 // Make a request
