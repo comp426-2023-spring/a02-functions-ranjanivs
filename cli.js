@@ -62,10 +62,22 @@ if(argv.j) {
     process.exit(0);
 }
 
-if (days == 0) {
-  console.log("today.")
-} else if (days > 1) {
-  console.log("in " + days + " days.")
+// galoshes or no
+let galosh, date;
+
+if(data.daily.precipitation_hours[days] > 0) {
+    galosh = "You might need your galoshes "
 } else {
-  console.log("tomorrow.")
+    galosh = "You will not need your galoshes "
 }
+
+
+if (days == 0) {
+  date = "today."
+} else if (days > 1) {
+  date = "in " + days + " days."
+} else {
+  date ="tomorrow."
+}
+
+console.log(galosh+date); //return
