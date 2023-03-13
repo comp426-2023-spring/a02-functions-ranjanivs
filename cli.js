@@ -30,22 +30,16 @@ if(argv.z != null){
 // latitude and longitude variables
 let latitude, longitude;
 
-if(argv.n && argv.n >= 0) {
+if(argv.n) {
     latitude = argv.n
-} else if (argv.s && argv.s < 0) {
+} else if (argv.s) {
     latitude = argv.s*-1
-} else {
-    console.log("Latitude out of range.");
-    process.exit(0);
-}
+} 
 
-if(argv.e && argv.e >=0) {
+if(argv.e) {
     longitude = argv.e
-} else if(argv.w && argv.w < 0) {
+} else if(argv.w) {
     longitude = argv.w*-1
-} else {
-    console.log("Longitude out of range");
-    process.exit(0);
 }
  
 // Make a request
