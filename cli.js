@@ -56,7 +56,7 @@ const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' 
 const data = await response.json();
 
 //create response text
-const days = args.d ?? 1
+const days = argv.d ?? 1
 
 if(argv.j) {
     console.log(data);
