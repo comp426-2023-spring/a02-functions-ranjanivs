@@ -27,5 +27,18 @@ if(argv.z != null){
     const timezone = moment.tz.guess()
 }
 
+// latitude and longitude variables
+let latitude, longitude;
 
+if(argv.n) {
+    latitude = argv.n
+} else if (argv.s) {
+    latitude = argv.s*-1
+}
+
+if(argv.e) {
+    longitude = argv.e
+} else if(argv.w) {
+    longitude = argv.w*-1
+}
  
